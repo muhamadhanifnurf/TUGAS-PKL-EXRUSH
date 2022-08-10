@@ -1,7 +1,7 @@
 # Tugas PKL EXRUSH
 
 # MySQL
-**Membuat database absensi guru** dengan tabel berisi users, data_guru, jadwal_guru, absensi_guru
+**Membuat database absensi guru dan nama tabel** dengan tabel berisi users, data_guru, jadwal_guru, absensi_guru
 
 ![Tugas Database Absensi Guru](https://user-images.githubusercontent.com/107165333/183583639-89be0c8c-0116-430f-abd7-85d7ee42e5f3.jpeg)
 
