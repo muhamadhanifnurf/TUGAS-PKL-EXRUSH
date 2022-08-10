@@ -29,3 +29,11 @@ Tugas dengan ip 65.20.81.197, users root dan password
 **3. VPS Mahendra**
 
 ![Tugas VPS Rafi](https://user-images.githubusercontent.com/107165333/183583778-8534941b-5394-4bd1-afe6-1715442fc621.png)
+
+**Install Web Server**
+
+![WhatsApp Image 2022-08-10 at 11 53 14](https://user-images.githubusercontent.com/107165333/183818935-6777b992-1ce9-42a0-8517-ef67a1436eb6.jpeg)
+
+![WhatsApp Image 2022-08-10 at 11 53 21](https://user-images.githubusercontent.com/107165333/183819010-1621d55b-6488-4474-8303-9ec2678aa5f1.jpeg)
+
+![Install Web Server](https://user-images.githubusercontent.com/107165333/183818841-b8f9c8c0-ee05-4d98-9c07-b4b59ae70383.png)
