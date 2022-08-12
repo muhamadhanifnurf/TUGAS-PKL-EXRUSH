@@ -6,7 +6,9 @@
 ![Tugas Database Absensi Guru](https://user-images.githubusercontent.com/107165333/183583639-89be0c8c-0116-430f-abd7-85d7ee42e5f3.jpeg)
 
 # PHP 
-**Mengkoneksikan PHP dengan MySQL**
+**Mengkoneksikan PHP dengan MySQL, Membuat tabel data, Membuat CRUD**
+
+![membuat crud](https://user-images.githubusercontent.com/107165333/184271804-753b29fc-c718-4f72-83cd-1ef382fc9a59.png)
 
 # VPS TUGAS
 Tugas dengan ip 65.20.81.197, users root dan password
