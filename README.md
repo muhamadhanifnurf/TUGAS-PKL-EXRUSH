@@ -3,7 +3,7 @@
 # MySQL
 **Membuat database absensi guru dan nama tabel**
 
-![Tabel Data Guru](https://user-images.githubusercontent.com/107165333/184466218-7bab2bfd-9d31-446d-8976-5acc9e3ad85a.jpeg)
+![Tugas Database Absensi Guru](https://user-images.githubusercontent.com/107165333/184466396-e82bbcc9-069e-489b-85d3-8e4faab83503.jpeg)
 
 **Data_guru**
 
