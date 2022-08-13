@@ -1,9 +1,26 @@
 # Tugas PKL EXRUSH
 
 # MySQL
-**Membuat database absensi guru dan nama tabel** dengan tabel berisi users, data_guru, jadwal_guru, absensi_guru
+**Membuat database absensi guru dan nama tabel**
 
-![Tugas Database Absensi Guru](https://user-images.githubusercontent.com/107165333/183583639-89be0c8c-0116-430f-abd7-85d7ee42e5f3.jpeg)
+![Tabel Data Guru](https://user-images.githubusercontent.com/107165333/184466218-7bab2bfd-9d31-446d-8976-5acc9e3ad85a.jpeg)
+
+**Data_guru**
+
+![Tabel Data Guru](https://user-images.githubusercontent.com/107165333/184466272-4c85042e-2eeb-4c5e-af6d-4c46bcf0ef0f.jpeg)
+
+**Jadwal_guru**
+
+![Tabel Jadwal Guru](https://user-images.githubusercontent.com/107165333/184466288-7cc73d08-fcfb-4745-9e04-6b276d9a422d.jpeg)
+
+**Absensi_guru**
+
+![Tabel Absensi Guru 01](https://user-images.githubusercontent.com/107165333/184466296-3f4a1324-3eec-428a-9407-6227ad8eb358.jpeg)
+![Tabel Absensi guru 02](https://user-images.githubusercontent.com/107165333/184466318-e91eef34-9afe-4a9e-88bf-bcb709bb5189.jpeg)
+
+**Users**
+
+![Tabel Users](https://user-images.githubusercontent.com/107165333/184466330-5cf0a093-6fc3-4989-88d6-17f32f92f629.jpeg)
 
 # PHP 
 **Mengkoneksikan PHP dengan MySQL, Membuat tabel data, Membuat CRUD**
