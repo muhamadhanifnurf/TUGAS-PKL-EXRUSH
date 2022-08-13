@@ -25,7 +25,7 @@
 # PHP 
 **Mengkoneksikan PHP dengan MySQL, Membuat tabel data, Membuat CRUD**
 
-![membuat crud](https://user-images.githubusercontent.com/107165333/184271804-753b29fc-c718-4f72-83cd-1ef382fc9a59.png)
+![menambahkan data](https://user-images.githubusercontent.com/107165333/184466834-c685e551-5f95-45bf-abed-adb43d227d71.png)
 
 # VPS TUGAS
 Tugas dengan ip 65.20.81.197, users root dan password
