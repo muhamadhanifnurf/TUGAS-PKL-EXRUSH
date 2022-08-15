@@ -49,3 +49,7 @@ Tugas dengan ip 65.20.81.197, users root dan password
 ![WhatsApp Image 2022-08-10 at 11 53 21](https://user-images.githubusercontent.com/107165333/183819010-1621d55b-6488-4474-8303-9ec2678aa5f1.jpeg)
 
 ![Install Web Server](https://user-images.githubusercontent.com/107165333/183818841-b8f9c8c0-ee05-4d98-9c07-b4b59ae70383.png)
+
+**DEPLOY HTML ke server VPS menggunakan FTP**
+
+![Cuplikan layar 2022-08-15 143729](https://user-images.githubusercontent.com/107165333/184597421-674aa2dd-87f0-4eeb-afbd-ebe2a823ad4e.png)
