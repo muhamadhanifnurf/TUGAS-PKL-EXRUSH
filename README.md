@@ -52,4 +52,5 @@ Tugas dengan ip 65.20.81.197, users root dan password
 
 **DEPLOY HTML ke server VPS menggunakan FTP**
 
-![Cuplikan layar 2022-08-15 143729](https://user-images.githubusercontent.com/107165333/184597421-674aa2dd-87f0-4eeb-afbd-ebe2a823ad4e.png)
+![Cuplikan layar 2022-08-16 103305](https://user-images.githubusercontent.com/107165333/184792519-5a6c690d-7ca5-4011-8736-85f37c7a9a75.png)
+
