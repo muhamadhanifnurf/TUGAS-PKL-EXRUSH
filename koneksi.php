@@ -3,16 +3,16 @@
 $host = 'localhost';
 $user = 'root';
 $password = '';
-$db = 'akademik';
+$db = 'absensi_guru';
 
 $koneksi = mysqli_connect($host, $user, $password, $db);
 if (!$koneksi) { //cek koneksi
     die("Tidak bisa terkoneksi ke database");
 }
-$nim       = "";
-$nama      = "";
-$alamat    = "";
-$fakultas  = "";
+$users       = "";
+$data_guru      = "";
+$jadwal_guru    = "";
+$absensi_guru  = "";
 $sukses    = "";
 $error     = "";
 
@@ -23,7 +23,7 @@ if (isset($_GET['op'])) {
 }
 if ($op == 'delete') {
     $id     = $_GET['id'];
-    $sql1   = "delete from mahasiswa where id = '$id'";
+    $sql1   = "delete from tugas where id = '$id'";
     $q1     = mysqli_query($koneksi, $sql1);
     if ($q1) {
         $sukses = "Berhasil hapus data";
@@ -33,28 +33,28 @@ if ($op == 'delete') {
 }
 if ($op == 'edit') {
     $id         = $_GET['id'];
-    $sql1       = "select * from mahasiswa where id = '$id'";
+    $sql1       = "select * from tugas where id = '$id'";
     $q1         = mysqli_query($koneksi, $sql1);
     $r1         = mysqli_fetch_array($q1);
-    $nim        = $r1['nim'];
-    $nama       = $r1['nama'];
-    $alamat     = $r1['alamat'];
-    $fakultas   = $r1['fakultas'];
+    $users        = $r1['users'];
+    $data_guru       = $r1['data_guru'];
+    $jadwal_guru     = $r1['jadwal_guru'];
+    $absensi_guru   = $r1['absensi_guru'];
 
-    if ($nim == '') {
+    if ($users == '') {
         $error = "Data tidak ditemukan";
     }
 }
 
 if (isset($_POST['simpan'])) { //untuk create
-    $nim        = $_POST['nim'];
-    $nama       = $_POST['nama'];
-    $alamat     = $_POST['alamat'];
-    $fakultas   = $_POST['fakultas'];
+    $users        = $_POST['users'];
+    $data_guru       = $_POST['data_guru'];
+    $jadwal_guru     = $_POST['jadwal_guru'];
+    $absensi_guru   = $_POST['absensi_guru'];
 
-    if ($nim && $nama && $alamat && $fakultas) {
+    if ($users && $data_guru && $jadwal_guru && $absensi_guru) {
         if ($op == 'edit') { //untuk update
-            $ql1    = "update mahasiswa set nim ='$nim', nama='$nama', alamat='$alamat', fakultas='$fakultas' where id ='$id'";
+            $sql1    = "update tugas set users ='$users', data_guru='$data_guru', jadwal_guru='$jadwal_guru', absensi_guru='$absensi_guru' where id ='$id'";
             $q1     = mysqli_query($koneksi, $sql1);
             if ($q1) {
                 $sukses = "Data berhasil diupdate";
@@ -62,7 +62,7 @@ if (isset($_POST['simpan'])) { //untuk create
                 $error = "Data gagal diupdate";
             }
         } else { //untuk insert
-            $sql1   = "insert into mahasiswa(nim,nama,alamat,fakultas) values ('$nim', '$nama','$alamat','$fakultas')";
+            $sql1   = "insert into tugas(users,data_guru,jadwal_guru,absensi_guru) values ('$users', '$data_guru','$jadwal_guru','$absensi_guru')";
             $q1     = mysqli_query($koneksi, $sql1);
             if ($q1) {
                 $sukses     = "Berhasil memasukkan data baru";
@@ -83,7 +83,7 @@ if (isset($_POST['simpan'])) { //untuk create
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mahasiswa</title>
+    <title>Data Guru</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         .max-auto {
@@ -111,7 +111,7 @@ if (isset($_POST['simpan'])) { //untuk create
                         <?php echo $error ?>
                     </div>
                 <?php
-                    header("refresh:5;url=koneksi.php"); //5 : detik
+                    header("refresh:300;url=koneksi.php"); //300 : detik/5menit
                 }
                 ?>
                 <?php
@@ -121,36 +121,32 @@ if (isset($_POST['simpan'])) { //untuk create
                         <?php echo $sukses ?>
                     </div>
                 <?php
-                    header("refresh:5;url=koneksi.php");
+                    header("refresh:300;url=koneksi.php");
                 }
                 ?>
                 <form action="" method="POST">
                     <div class="mb-3 row">
-                        <label for="nim" class="col-sm-2 col-form-label">NIM</label>
+                        <label for="users" class="col-sm-2 col-form-label">Users</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nim" name="nim" value="<?php echo $nim ?>">
+                            <input type="text" class="form-control" id="users" name="users" value="<?php echo $users ?>">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                        <label for="data_guru" class="col-sm-2 col-form-label">Data Guru</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $nama ?>">
+                            <input type="text" class="form-control" id="data_guru" name="data_guru" value="<?php echo $data_guru ?>">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
+                        <label for="jadwal_guru" class="col-sm-2 col-form-label">Jadwal Guru</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="alamat" name="alamat" value="<?php echo $alamat ?>">
+                            <input type="text" class="form-control" id="jadwal_guru" name="jadwal_guru" value="<?php echo $jadwal_guru ?>">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="fakultas" class="col-sm-2 col-form-label">Fakultas</label>
+                        <label for="absensi_guru" class="col-sm-2 col-form-label">Absensi Guru</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="fakultas" id="fakultas">
-                                <option value="">- Pilih Fakultas -</option>
-                                <option value="saintek" <?php if ($fakultas == "saintek") echo "selected" ?>>saintek</option>
-                                <option value="soshum" <?php if ($fakultas == "soshum") echo "selected" ?>>soshum</option>
-                            </select>
+                            <input type="text" class="form-control" id="absensi_guru" name="absensi_guru" value="<?php echo $absensi_guru ?>">
                         </div>
                     </div>
                     <div class="col-12">
@@ -163,38 +159,37 @@ if (isset($_POST['simpan'])) { //untuk create
         <!--untuk mengeluarkan data-->
         <div class="card">
             <div class="card-header text-white bg-secondary">
-                Data Mahasiswa
+                Data Guru
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">NIM</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Alamat</th>
-                            <th scope="col">Fakultas</th>
-                            <th scope="col">Aksi</th>
+                            <th scope="col">Users</th>
+                            <th scope="col">Data Guru</th>
+                            <th scope="col">Jadwal Guru</th>
+                            <th scope="col">Absensi Guru</th>
                         </tr>
                     <tbody>
                         <?php
-                        $sql2   = "select * from mahasiswa order by id desc";
+                        $sql2   = "select * from tugas order by id desc";
                         $q2     = mysqli_query($koneksi, $sql2);
                         $urut   = 1;
                         while ($r2 = mysqli_fetch_array($q2)) {
                             $id         = $r2['id'];
-                            $nim        = $r2['nim'];
-                            $nama       = $r2['nama'];
-                            $alamat     = $r2['alamat'];
-                            $fakultas   = $r2['fakultas'];
+                            $users        = $r2['users'];
+                            $data_guru       = $r2['data_guru'];
+                            $jadwal_guru     = $r2['jadwal_guru'];
+                            $absensi_guru   = $r2['absensi_guru'];
 
                         ?>
                             <tr>
                                 <th scope="row"><?php echo $urut++ ?></th>
-                                <td scope="row"><?php echo $nim ?></td>
-                                <td scope="row"><?php echo $nama ?></td>
-                                <td scope="row"><?php echo $alamat ?></td>
-                                <td scope="row"><?php echo $fakultas ?></td>
+                                <td scope="row"><?php echo $users ?></td>
+                                <td scope="row"><?php echo $data_guru ?></td>
+                                <td scope="row"><?php echo $jadwal_guru ?></td>
+                                <td scope="row"><?php echo $absensi_guru ?></td>
                                 <td scope="row">
                                     <a href="koneksi.php?op=edit&id=<?php echo $id ?>"><button type="button" class="btn btn-warning">Edit</button></a>
                                     <a href="koneksi.php?op=delete&id=<?php echo $id ?>" onclick="return confirm('Yakin mau delete data?')"><button type="button" class="btn btn-danger">Delte</button></a>
